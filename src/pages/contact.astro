@@ -4,35 +4,36 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+const isDraft = true;  // Set to true to hide this section as a draft
 ---
 
 <Layout title="Contact">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Contact</Fragment>
-      <Fragment slot="desc">We are a here to help.</Fragment>
+      <Fragment slot="title">Contatti</Fragment>
+      <Fragment slot="desc">Qui per aiutarti.</Fragment>
     </Sectionhead>
 
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
       <div>
-        <h2 class="font-medium text-2xl text-gray-800">Contact Astroship</h2>
+        <h2 class="font-medium text-2xl text-gray-800">Contatta buon inglese</h2>
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
-          Have something to say? We are here to help. Fill up the form or send
-          email or call phone.
+          Stai pensando di iniziare un corso, o forse hai bisogno di aiuto in qualche altro modo. Fatecelo sapere e saremo lieti di aiutarti.
         </p>
         <div class="mt-5">
           <div class="flex items-center mt-2 space-x-2 text-gray-600">
             <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>1734 Sanfransico, CA 93063</span>
+            <span>Via Calefati 6 Bari, BA 70121</span>
           </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
             <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hello@astroshipstarter.com"
-              >hello@astroshipstarter.com</a
+              href="mailto:info@buoninglese.com"
+              >info@buoninglese.com</a
             >
           </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+1 (987) 4587 899">+1 (987) 4587 899</a
-            >
+            {!isDraft && 
+            (<Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
+              <a href="tel:+39 351 316 1625">+39 351 316 1625</a>
+            )}
           </div>
         </div>
       </div>

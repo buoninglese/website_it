@@ -10,49 +10,49 @@ import Button from "./ui/button.astro";
   id="form"
   class="needs-validation"
   novalidate>
-  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+  <input type="hidden" name="access_key" value="ba0dbc3a-ff84-4ccc-ac74-1baca26b1eb1" />
   <!-- Create your free access key from https://web3forms.com/ -->
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
     <input
       type="text"
-      placeholder="Full Name"
+      placeholder="Il tuo nome"
       required
       class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
       name="name"
     />
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-      Please provide your full name.
+      Come ti chiami?
     </div>
   </div>
   <div class="mb-5">
-    <label for="email_address" class="sr-only">Email Address</label><input
+    <label for="email_address" class="sr-only">Email</label><input
       id="email_address"
       type="email"
-      placeholder="Email Address"
+      placeholder="Email"
       name="email"
       required
       class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     />
     <div class="empty-feedback text-red-400 text-sm mt-1">
-      Please provide your email address.
+      Per favore fornisci il tuo indirizzo email.
     </div>
     <div class="invalid-feedback text-red-400 text-sm mt-1">
-      Please provide a valid email address.
+      Si prega di fornire un indirizzo email valido.
     </div>
   </div>
   <div class="mb-3">
     <textarea
       name="message"
       required
-      placeholder="Your Message"
+      placeholder="Raccontaci di te e chiedi maggiori informazioni"
       class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     ></textarea>
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-      Please enter your message.
+      Scrivi il tuo messaggio.
     </div>
   </div>
-  <Button type="submit" size="lg" block>Send Message</Button>
+  <Button type="submit" size="lg" block>Invia messaggio</Button>
   <div id="result" class="mt-3 text-center"></div>
 </form>
 
@@ -114,7 +114,7 @@ import Button from "./ui/button.astro";
       })
       .catch((error) => {
         console.log(error);
-        result.innerHTML = "Something went wrong!";
+        result.innerHTML = "Qualcosa è andato storto!";
       })
       .then(function () {
         form.reset();

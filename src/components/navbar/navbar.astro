@@ -14,27 +14,31 @@ const menuitems = [
       { title: "Dropdown Submenu", path: "#" },
       { title: "404 Page", path: "/404" },
     ],
+    draft: true
   },
   {
     title: "Pricing",
     path: "/pricing",
+    badge: false,
+    draft: true
   },
   {
     title: "About",
     path: "/about",
+    badge: false,
+    draft: true
   },
   {
     title: "Blog",
     path: "/blog",
+    badge: false,
+    draft: true
   },
   {
     title: "Contact",
     path: "/contact",
-  },
-  {
-    title: "Pro Version",
-    badge: true,
-    path: "https://astroship-pro.web3templates.com/",
+    badge: false,
+    draft: false
   },
 ];
 ---
@@ -44,8 +48,8 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
+          ><span class="font-bold text-slate-800">buon</span><span
+            class="text-slate-500">inglese</span><span class="font-bold text-slate-800">bari</span
           >
         </a>
         <div class="block lg:hidden">
@@ -55,7 +59,9 @@ const menuitems = [
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
-            menuitems.map((item, index) => (
+            menuitems
+            .filter(item => !item.draft) // Filter out items with 'draft: true'
+            .map((item, index) => (
               <>
                 {item.children && (
                   <Dropdown
@@ -84,15 +90,15 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
+          <Link href="https://maps.app.goo.gl/yrgViRNyx5ZC6DHx8" target="_blank" style="muted" block size="md">Via Calefati 6 Bari</Link>
+          <Link href="#" size="md" block>buoninglese.it</Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
+        <a href="https://maps.app.goo.gl/yrgViRNyx5ZC6DHx8" target="_blank">Via Calefati 6 Bari</a>
+        <Link href="#" size="md">buoninglese.it</Link>
       </div>
     </div>
   </header>
