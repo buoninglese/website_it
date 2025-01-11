@@ -1,0 +1,75 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingCard from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "Valutazione",
+    price: "Gratis",
+    popular: true,
+    features: [
+      "Livello orientativo",
+      "Obiettivi su misura",
+      "Feedback immediato",
+      "Consulenza senza impegno",
+    ],
+    button: {
+      text: "Contattaci",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Formazione e coaching",
+    price: {
+      monthly: "Su misura",
+      annual: "",
+      discount: "",
+      original: "",
+    },
+    popular: true,
+    features: [
+      "Preparazione Esami Cambridge",
+      "Corsi Intensivi",
+      "Online e in presenza",
+      "Fino a 5 studenti",
+    ],
+    button: {
+      text: "Contattaci",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Formazione Aziendale",
+    price: "Collabora",
+    popular: false,
+    features: [
+      "Comunicazione aziendale",
+      "Crescita professionale",
+      "Corsi innovativi",
+      "Methodi efficaci",
+      "Team più competitivo"
+    ],
+    button: {
+      text: "Lavora insieme",
+      link: "/contact",
+    },
+  },
+];
+---
+
+<Layout title="Pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Inizia con Buon Inglese</Fragment>
+      <Fragment slot="desc">
+        Non conta da dove parti, ma dove vuoi arrivare.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <PricingCard plan={item} />)}
+    </div>
+  </Container>
+</Layout>
