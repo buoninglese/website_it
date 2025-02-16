@@ -51,7 +51,7 @@ const makeTitle = title
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Homepage Screenshot",
         },
       }}
     />
@@ -61,14 +61,95 @@ const makeTitle = title
     <slot />
     <Footer />
     <style is:global>
-      body {
-        background-color: #1ac5db;
+      /* Define color variables */
+      :root {
+        /* Backgrounds */
+        --primary-bg-color: #1ac5db; /* Body background color */
+        --header-bg-color: #ffffff; /* Header background color */
+        --footer-bg-color: #222222; /* Footer background color */
+        --sidebar-bg-color: #f4f4f4; /* Sidebar background color */
+
+        /* Text colors */
+        --primary-text-color: #333333; /* Primary text color */
+        --secondary-text-color: #666666; /* Secondary text color (e.g., subheadings, minor text) */
+        --link-text-color: #0077cc; /* Link color */
+        --header-text-color: #444444; /* Header text color */
+        --footer-text-color: #ffffff; /* Footer text color */
+
+        /* Button colors */
+        --button-bg-color: #0077cc; /* Button background color */
+        --button-text-color: #ffffff; /* Button text color */
+        --button-hover-bg-color: #005fa3; /* Button hover background color */
+
+        /* Border colors */
+        --border-color: #dddddd; /* General border color */
+        --header-border-color: #bbbbbb; /* Header border color */
+        --footer-border-color: #444444; /* Footer border color */
+
+        /* Accent colors */
+        --accent-color: #ff5733; /* Accent color for highlights */
+        --highlight-color: #f4f4f4; /* Highlight color for selected elements */
+
+        /* Shadow colors */
+        --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow color */
       }
-      /* Improve Page speed */
-      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+
+      /* Apply variables in your styles */
+      body {
+        background-color: var(--primary-bg-color); /* Primary background color */
+        color: var(--primary-text-color); /* Primary text color */
+      }
+
+      header {
+        background-color: var(--header-bg-color); /* Header background color */
+        color: var(--header-text-color); /* Header text color */
+        border-bottom: 1px solid var(--header-border-color); /* Header border color */
+      }
+
+      footer {
+        background-color: var(--footer-bg-color); /* Footer background color */
+        color: var(--footer-text-color); /* Footer text color */
+        border-top: 1px solid var(--footer-border-color); /* Footer border color */
+      }
+
+      a {
+        color: var(--link-text-color); /* Link text color */
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: var(--accent-color); /* Accent color on hover */
+      }
+
+      button {
+        background-color: var(--button-bg-color); /* Button background color */
+        color: var(--button-text-color); /* Button text color */
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: var(--button-hover-bg-color); /* Button hover background color */
+      }
+
+      .sidebar {
+        background-color: var(--sidebar-bg-color); /* Sidebar background color */
+        border-right: 1px solid var(--border-color); /* Sidebar border color */
+      }
+
+      .highlight {
+        background-color: var(--highlight-color); /* Highlighted content */
+      }
+
+      .prose {
+        color: var(--primary-text-color); /* Text color for paragraphs */
+      }
+
       img {
         content-visibility: auto;
       }
     </style>
-  </body>
+</body>
+
 </html>
