@@ -64,63 +64,63 @@ const makeTitle = title
       /* Define color variables */
       :root {
         /* Backgrounds */
-        --primary-bg-color: #1451c2ea; /* Body background color */
-        --header-bg-color: #1451c2ea; /* Header background color */
-        --footer-bg-color: #1451c2ea; /* Footer background color */
-        --sidebar-bg-color:rgb(255, 255, 255); /* Sidebar background color */
-
+        --primary-bg-color: #003b5c; /* Prussian Blue for body background */
+        --header-bg-color: #003b5c; /* Prussian Blue for header background */
+        --footer-bg-color: #003b5c; /* Prussian Blue for footer background */
+        --sidebar-bg-color: #f7f7f7; /* Light gray for sidebar background */
+    
         /* Text colors */
-        --primary-text-color: #ffffff; /* Primary text color */
-        --secondary-text-color: #14e737; /* Secondary text color (e.g., subheadings, minor text) */
-        --link-text-color: #5dc5cc; /* Link color */
-        --header-text-color: #444444; /* Header text color */
-        --footer-text-color: #ffffff; /* Footer text color */
-
+        --primary-text-color: #ffffff; /* White text for main content */
+        --secondary-text-color: #ffcc00; /* Gold for secondary text (e.g., subheadings, minor text) */
+        --link-text-color: #4fd1c5; /* Teal for link text */
+        --header-text-color: #ffffff; /* White text for header */
+        --footer-text-color: #ffffff; /* White text for footer */
+    
         /* Button colors */
-        --button-bg-color: #0077cc; /* Button background color */
-        --button-text-color: #ffffff; /* Button text color */
-        --button-hover-bg-color: #005fa3; /* Button hover background color */
-
+        --button-bg-color: #0082a3; /* A lighter shade of Prussian Blue for buttons */
+        --button-text-color: #ffffff; /* White text for buttons */
+        --button-hover-bg-color: #006885; /* Darker shade of Prussian Blue for button hover */
+    
         /* Border colors */
-        --border-color: #dddddd; /* General border color */
-        --header-border-color: #bbbbbb; /* Header border color */
-        --footer-border-color: #444444; /* Footer border color */
-
+        --border-color: #dddddd; /* Light gray border color */
+        --header-border-color: #ffffff; /* White border for header */
+        --footer-border-color: #444444; /* Dark gray for footer border */
+    
         /* Accent colors */
-        --accent-color: #ff5733; /* Accent color for highlights */
-        --highlight-color: #f4f4f4; /* Highlight color for selected elements */
-
+        --accent-color: #ff5733; /* Accent color for highlights (vibrant red-orange) */
+        --highlight-color: #f4f4f4; /* Light gray for highlighted content */
+    
         /* Shadow colors */
-        --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow color */
+        --shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow color for depth */
       }
-
+    
       /* Apply variables in your styles */
       body {
         background-color: var(--primary-bg-color); /* Primary background color */
         color: var(--primary-text-color); /* Primary text color */
       }
-
+    
       header {
         background-color: var(--header-bg-color); /* Header background color */
         color: var(--header-text-color); /* Header text color */
         border-bottom: 1px solid var(--header-border-color); /* Header border color */
       }
-
+    
       footer {
         background-color: var(--footer-bg-color); /* Footer background color */
         color: var(--footer-text-color); /* Footer text color */
         border-top: 1px solid var(--footer-border-color); /* Footer border color */
       }
-
+    
       a {
         color: var(--link-text-color); /* Link text color */
         text-decoration: none;
       }
-
+    
       a:hover {
         color: var(--accent-color); /* Accent color on hover */
       }
-
+    
       button {
         background-color: var(--button-bg-color); /* Button background color */
         color: var(--button-text-color); /* Button text color */
@@ -128,28 +128,28 @@ const makeTitle = title
         padding: 10px 20px;
         cursor: pointer;
       }
-
+    
       button:hover {
         background-color: var(--button-hover-bg-color); /* Button hover background color */
       }
-
+    
       .sidebar {
         background-color: var(--sidebar-bg-color); /* Sidebar background color */
         border-right: 1px solid var(--border-color); /* Sidebar border color */
       }
-
+    
       .highlight {
         background-color: var(--highlight-color); /* Highlighted content */
       }
-
+    
       .prose {
         color: var(--primary-text-color); /* Text color for paragraphs */
       }
-
+    
       img {
         content-visibility: auto;
       }
     </style>
-</body>
-
-</html>
+    </body>
+    </html>
+    
